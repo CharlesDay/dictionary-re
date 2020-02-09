@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   constructor(props) {
       super(props);
-      this.state = { apiResponse: "" };
+      this.state = { apiResponse: ""};
   }
 
   callAPI() {
@@ -19,8 +19,10 @@ class App extends Component {
   }
 
   render() {
+    let inputClassNames = ["ui input", "focus"];
     return (
       <div className="App">
+        <div className={inputClassNames.join(" ")}><input type="text" placeholder="Search..." /></div>
         <p className="App-intro">The response is {this.state.apiResponse}</p>
       </div>
     );
